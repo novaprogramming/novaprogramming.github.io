@@ -43,11 +43,12 @@ a {
 .logo {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .logo img {
-    width: 58px;
-    height: 58px;
+    width: 90px;
+    height: 50px;
     object-fit: contain;
     display: block;
 }
