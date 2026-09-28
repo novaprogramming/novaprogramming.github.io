@@ -1,0 +1,475 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05050a;
+    color: #f5f7ff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(5, 5, 10, 0.85);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo-symbol {
+    font-size: 1.8rem;
+    color: #7c7cff;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aeb2c7;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.nav-button {
+    padding: 9px 18px;
+    border-radius: 8px;
+
+    background: #6c63ff;
+    color: white;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    background: #817aff;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 85vh;
+
+    padding: 100px 7%;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(92, 80, 255, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(0, 220, 255, 0.10),
+            transparent 35%
+        );
+}
+
+.eyebrow {
+    color: #7d83ff;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #6c63ff,
+        #8b7cff,
+        #31d9ff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    color: #aeb2c7;
+
+    font-size: 1.25rem;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.primary {
+    background: #6c63ff;
+    color: white;
+
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.25);
+}
+
+.primary:hover {
+    background: #817aff;
+}
+
+.secondary {
+    border: 1px solid #38394b;
+    color: #dfe2f5;
+}
+
+.secondary:hover {
+    border-color: #6c63ff;
+}
+
+
+/* CODE WINDOWS */
+
+.hero-code,
+.large-code {
+    background: #0b0b13;
+
+    border: 1px solid #25263a;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.code-header {
+    padding: 13px 18px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #777b94;
+
+    background: #10101a;
+
+    border-bottom: 1px solid #25263a;
+
+    font-size: 0.85rem;
+}
+
+pre {
+    padding: 25px;
+
+    overflow-x: auto;
+
+    color: #dfe2ff;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 0.95rem;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 110px 7%;
+
+    max-width: 1400px;
+    margin: auto;
+}
+
+.section h2,
+.download h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.section-text {
+    color: #aeb2c7;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 40px;
+}
+
+
+/* FEATURE CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 50px;
+}
+
+.card {
+    padding: 30px;
+
+    background: #0b0b13;
+
+    border: 1px solid #25263a;
+
+    border-radius: 14px;
+
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    border-color: #5750c9;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: #9da1b8;
+}
+
+
+/* LEARNING */
+
+.learn-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-top: 40px;
+}
+
+.learn-item {
+    padding: 25px;
+
+    background: #090910;
+
+    border-left: 3px solid #6c63ff;
+}
+
+.learn-item h3 {
+    margin-bottom: 7px;
+}
+
+.learn-item p {
+    color: #9da1b8;
+}
+
+
+/* RELEASES */
+
+.release {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px;
+
+    margin-top: 15px;
+
+    background: #0b0b13;
+
+    border: 1px solid #25263a;
+
+    border-radius: 12px;
+}
+
+.release p {
+    color: #9da1b8;
+}
+
+.badge {
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    background: #25263a;
+
+    color: #aeb2c7;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.badge.stable {
+    background: #314e6d;
+
+    color: #dcecff;
+}
+
+
+/* DOWNLOAD */
+
+.download {
+    padding: 120px 7%;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(108, 99, 255, 0.18),
+            transparent 55%
+        );
+}
+
+.download p {
+    color: #aeb2c7;
+
+    margin-bottom: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 50px 7%;
+
+    border-top: 1px solid #202130;
+
+    text-align: center;
+
+    color: #777b94;
+}
+
+.footer-logo {
+    color: white;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    font-size: 0.85rem;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 70px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .learn-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+    }
+}
