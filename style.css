@@ -41,15 +41,18 @@ a {
 }
 
 .logo {
-    width: 170px;
-    height: 80px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 110px;
+    flex-shrink: 0;
 }
 
 .logo img {
-    width: 170px;
-    height: 80px;
-    max-width: 170px;
-    max-height: 80px;
+    display: block;
+    width: 250px;
+    height: 110px;
+    object-fit: contain;
 }
 
 nav {
