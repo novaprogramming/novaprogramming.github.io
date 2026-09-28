@@ -25,7 +25,9 @@ a {
 
 .navbar {
     width: 100%;
-    padding: 10px 7%;
+    height: 70px;
+    padding: 5px 7%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,14 +46,14 @@ a {
     display: flex;
     align-items: center;
     width: 100px;
-    height: 65px;
+    height: 60px;
     flex-shrink: 0;
 }
 
 .logo img {
     display: block;
     width: 100px;
-    height: 65px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -471,6 +473,7 @@ footer {
     }
 
     .navbar {
-        padding: 18px 5%;
+    height: 65px;
+    padding: 5px 5%;
     }
 }
