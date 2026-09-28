@@ -43,15 +43,13 @@ a {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-
-    font-size: 1.4rem;
-    font-weight: 700;
 }
 
-.logo-symbol {
-    font-size: 1.8rem;
-    color: #7c7cff;
+.logo img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    display: block;
 }
 
 nav {
