@@ -573,3 +573,145 @@ footer {
         padding: 70px 5% 80px;
     }
 }
+
+/* =========================
+   Release Sections
+   ========================= */
+
+.release-section {
+    max-width: 1100px;
+    margin: 0 auto 75px;
+}
+
+.release-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.release-header h2 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.release-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Stable */
+
+.release-badge.stable {
+    background: rgba(60, 220, 150, 0.12);
+    color: #62e6a3;
+    border-color: rgba(60, 220, 150, 0.3);
+}
+
+/* Beta */
+
+.release-badge.beta {
+    background: rgba(155, 92, 255, 0.13);
+    color: #b58aff;
+    border-color: rgba(155, 92, 255, 0.3);
+}
+
+/* Alpha */
+
+.release-badge.alpha {
+    background: rgba(79, 140, 255, 0.13);
+    color: #72a8ff;
+    border-color: rgba(79, 140, 255, 0.3);
+}
+
+/* Coming Soon */
+
+.release-badge.upcoming {
+    background: rgba(255, 255, 255, 0.06);
+    color: #aaa;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.release-description {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #aaa;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Release Download Cards
+   ========================= */
+
+.release-section .download-options {
+    max-width: 900px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.release-section .download-card {
+    padding: 32px 28px;
+}
+
+.release-section .download-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.release-section .download-card .download-description {
+    min-height: 45px;
+}
+
+
+/* =========================
+   Release Dividers
+   ========================= */
+
+.release-section + .release-section {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================
+   Mobile Release Layout
+   ========================= */
+
+@media (max-width: 850px) {
+
+    .release-section {
+        margin-bottom: 60px;
+    }
+
+    .release-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .release-header h2 {
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    .release-description {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .release-section .download-options {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+}
